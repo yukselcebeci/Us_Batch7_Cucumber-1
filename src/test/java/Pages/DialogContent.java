@@ -20,6 +20,9 @@ public class DialogContent {
     @FindBy(xpath = "//span[contains(text(),'LOGIN')]")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//div[@class='ng-star-inserted']//span[contains(text(),'Dashboard')]")
+    private WebElement dashBoardHeader;
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
@@ -30,5 +33,9 @@ public class DialogContent {
 
     public WebElement getLoginButton() {
         return loginButton;
+    }
+
+    public WebElement getDashBoardHeader() {
+        return dashBoardHeader;
     }
 }

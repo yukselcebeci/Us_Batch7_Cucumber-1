@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Utilities.BasicDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -14,6 +15,7 @@ public class Hooks {
 
     @After // This method runs after every scenario
     public void afterScenario(){
+        BasicDriver.quitDriver();
         System.out.println("Scenario has ended");
     }
 

@@ -5,6 +5,7 @@ import Utilities.BasicDriver;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -19,9 +20,10 @@ public class _01_LoginSteps {
 
     @When("Enter username and password")
     public void enter_username_and_password() {
-        wait.until(ExpectedConditions.visibilityOf(dialogContent.getLoginUsername()));
-        dialogContent.getLoginUsername().sendKeys("turkeyts");
-        dialogContent.getLoginPassword().sendKeys("TechnoStudy123");
+
+//        wait.until(ExpectedConditions.visibilityOf(dialogContent.getLoginUsername()));
+//        dialogContent.getLoginUsername().sendKeys("turkeyts");
+//        dialogContent.getLoginPassword().sendKeys("TechnoStudy123");
     }
 
     @When("Click on Login Button")
@@ -31,6 +33,7 @@ public class _01_LoginSteps {
 
     @Then("User should login successfully")
     public void user_should_login_successfully() {
-        System.out.println("Step 4");
+        wait.until(ExpectedConditions.visibilityOf(dialogContent.getDashBoardHeader()));
+        Assert.assertTrue(dialogContent.getDashBoardHeader().isDisplayed());
     }
 }
