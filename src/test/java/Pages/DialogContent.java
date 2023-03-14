@@ -39,6 +39,9 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
+    @FindBy(xpath = "//div[@id='cconsent-bar']//button[@class='consent-give']")
+    private WebElement acceptCookies;
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
@@ -73,5 +76,9 @@ public class DialogContent extends MyMethods {
 
     public WebElement getSuccessMessage() {
         return successMessage;
+    }
+
+    public WebElement getAcceptCookies() {
+        return acceptCookies;
     }
 }
