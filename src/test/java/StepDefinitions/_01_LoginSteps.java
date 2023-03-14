@@ -21,9 +21,9 @@ public class _01_LoginSteps {
     @When("Enter username and password")
     public void enter_username_and_password() {
 
-//        wait.until(ExpectedConditions.visibilityOf(dialogContent.getLoginUsername()));
-//        dialogContent.getLoginUsername().sendKeys("turkeyts");
-//        dialogContent.getLoginPassword().sendKeys("TechnoStudy123");
+        wait.until(ExpectedConditions.visibilityOf(dialogContent.getLoginUsername()));
+        dialogContent.getLoginUsername().sendKeys("turkeyts");
+        dialogContent.getLoginPassword().sendKeys("TechnoStudy123");
     }
 
     @When("Click on Login Button")
