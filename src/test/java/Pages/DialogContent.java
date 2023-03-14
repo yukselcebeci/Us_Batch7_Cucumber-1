@@ -18,7 +18,7 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//input[@placeholder='Password']")
     private WebElement loginPassword;
 
-    @FindBy(xpath = "//span[contains(text(),'LOGIN')]")
+    @FindBy(xpath = "//span[contains(text(),' LOGIN ')]")
     private WebElement loginButton;
 
     @FindBy(xpath = "//div[@class='ng-star-inserted']//span[contains(text(),'Dashboard')]")
