@@ -42,4 +42,20 @@ public class _02_CountrySteps {
         dc.clickMethod(dc.getDeleteCountryButton());
         dc.clickMethod(dc.getConfirmDeleteCountry());
     }
+
+    @And("Click on add button")
+    public void clickOnAddButton() {
+        dc.clickMethod(dc.getAddButton());
+    }
+
+    @When("Enter country name as {string} and code as {string}")
+    public void enterCountryNameAsAndCodeAs(String countryName, String countryCode) {
+        dc.sendKeysMethod(dc.getFormNameInput(),countryName);
+        dc.sendKeysMethod(dc.getFormCodeInput(),countryCode);
+    }
+
+    @And("Click on save button")
+    public void clickOnSaveButton() {
+        dc.clickMethod(dc.getSaveButton());
+    }
 }
