@@ -15,8 +15,10 @@ Feature: Country Functionality
       And Click on Login Button
       Then User should login successfully
       And Navigate to Country page
+      When Delete country
+      Then Success message should be displayed
 
-#
+
 
 
 
