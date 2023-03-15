@@ -21,6 +21,9 @@ public class Navigation extends MyMethods {
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     private WebElement countriesBtn;
 
+    @FindBy(xpath = "//a[@href='/citizenships/list']")
+    private WebElement citizenshipButton;
+
     public WebElement getSetupBtn() {
         return setupBtn;
     }
@@ -31,5 +34,9 @@ public class Navigation extends MyMethods {
 
     public WebElement getCountriesBtn() {
         return countriesBtn;
+    }
+
+    public WebElement getCitizenshipButton() {
+        return citizenshipButton;
     }
 }

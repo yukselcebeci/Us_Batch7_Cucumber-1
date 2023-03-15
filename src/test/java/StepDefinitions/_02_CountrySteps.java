@@ -2,7 +2,6 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.Navigation;
-import Utilities.MyMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -35,12 +34,12 @@ public class _02_CountrySteps {
 
     @When("Delete country")
     public void deleteCountry() {
-        dc.sendKeysMethod(dc.getCountryNameSearch(),"USA1");
+        dc.sendKeysMethod(dc.getNameSearch(),"USA1");
         dc.sendKeysMethod(dc.getCountryCodeSearch(),"U1");
-        dc.clickMethod(dc.getCountrySearchBtn());
+        dc.clickMethod(dc.getSearchButton());
         dc.wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("ms-delete-button[class='ng-star-inserted']"),10));
-        dc.clickMethod(dc.getDeleteCountryButton());
-        dc.clickMethod(dc.getConfirmDeleteCountry());
+        dc.clickMethod(dc.getDeleteButton());
+        dc.clickMethod(dc.getConfirmDeleteButton());
     }
 
     @And("Click on add button")
