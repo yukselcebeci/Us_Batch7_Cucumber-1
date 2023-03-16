@@ -68,6 +68,12 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "(//input[@data-placeholder='Short Name'])[1]")
     private WebElement citizenShipShortNameSearch;
 
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    private WebElement integrationCode;
+
+    @FindBy(xpath = "(//input[@data-placeholder='Priority'])[2]")
+    private WebElement priorityInput;
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
@@ -138,5 +144,13 @@ public class DialogContent extends MyMethods {
 
     public WebElement getCitizenShipShortNameSearch() {
         return citizenShipShortNameSearch;
+    }
+
+    public WebElement getIntegrationCode() {
+        return integrationCode;
+    }
+
+    public WebElement getPriorityInput() {
+        return priorityInput;
     }
 }

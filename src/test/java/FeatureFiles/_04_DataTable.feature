@@ -23,3 +23,7 @@ Feature: Data Table Example
       | Phone     | 8654123658       |
     Then Save the form
 
+#  Scenario outline runs the entire scenario for each set of data
+#  Data table sends the entire data to only one step at the same time
+#  and runs the scenario once
+
