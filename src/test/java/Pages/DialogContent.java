@@ -48,7 +48,7 @@ public class DialogContent extends MyMethods {
     private WebElement nameSearch;
 
     @FindBy(xpath = "(//input[@data-placeholder='Code'])[1]")
-    private WebElement countryCodeSearch;
+    private WebElement codeSearch;
 
     @FindBy(xpath = "//span[text()='Search']")
     private WebElement searchButton;
@@ -73,6 +73,9 @@ public class DialogContent extends MyMethods {
 
     @FindBy(xpath = "(//input[@data-placeholder='Priority'])[2]")
     private WebElement priorityInput;
+
+    @FindBy(xpath = "(//input[@data-placeholder='Priority'])[1]")
+    private WebElement prioritySearchInput;
 
     public WebElement getLoginUsername() {
         return loginUsername;
@@ -118,8 +121,8 @@ public class DialogContent extends MyMethods {
         return nameSearch;
     }
 
-    public WebElement getCountryCodeSearch() {
-        return countryCodeSearch;
+    public WebElement getCodeSearch() {
+        return codeSearch;
     }
 
     public WebElement getSearchButton() {
@@ -152,5 +155,9 @@ public class DialogContent extends MyMethods {
 
     public WebElement getPriorityInput() {
         return priorityInput;
+    }
+
+    public WebElement getPrioritySearchInput() {
+        return prioritySearchInput;
     }
 }

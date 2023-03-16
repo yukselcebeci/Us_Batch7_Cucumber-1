@@ -35,7 +35,7 @@ public class _02_CountrySteps {
     @When("Delete country")
     public void deleteCountry() {
         dc.sendKeysMethod(dc.getNameSearch(),"USA1");
-        dc.sendKeysMethod(dc.getCountryCodeSearch(),"U1");
+        dc.sendKeysMethod(dc.getCodeSearch(),"U1");
         dc.clickMethod(dc.getSearchButton());
         dc.wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("ms-delete-button[class='ng-star-inserted']"),10));
         dc.clickMethod(dc.getDeleteButton());
