@@ -77,6 +77,24 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "(//input[@data-placeholder='Priority'])[1]")
     private WebElement prioritySearchInput;
 
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    private WebElement entranceExamsCreateNameInput;
+
+    @FindBy(css = "mat-select[id='mat-select-24']")
+    private WebElement academicPeriodSelect;
+
+    @FindBy(xpath = "//span[text()=' 2022-2023 Academic Period ']")
+    private WebElement academicPeriodOption;
+
+    @FindBy(css = "mat-select[id='mat-select-26']")
+    private WebElement gradeLevelSelect;
+
+    @FindBy(xpath = "//mat-option[@id='mat-option-408']//span")
+    private WebElement gradeLevelOption;
+
+    @FindBy(id = "mat-tab-label-1-2")
+    private WebElement description;
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
