@@ -80,20 +80,29 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     private WebElement entranceExamsCreateNameInput;
 
-    @FindBy(css = "mat-select[id='mat-select-24']")
+    @FindBy(xpath = "//mat-select[@formcontrolname='academicPeriod']")
     private WebElement academicPeriodSelect;
 
     @FindBy(xpath = "//span[text()=' 2022-2023 Academic Period ']")
     private WebElement academicPeriodOption;
 
-    @FindBy(css = "mat-select[id='mat-select-26']")
+    @FindBy(xpath = "//mat-select[@formcontrolname='id']")
     private WebElement gradeLevelSelect;
 
-    @FindBy(xpath = "//mat-option[@id='mat-option-408']//span")
+    @FindBy(xpath = "(//span[@class='mat-option-text'])[1]")
     private WebElement gradeLevelOption;
 
-    @FindBy(id = "mat-tab-label-1-2")
+    @FindBy(xpath = "(//div[@role='tab'])[3]")
     private WebElement description;
+
+    @FindBy(css = "body[id='tinymce']>p")
+    private WebElement descriptionAndNoteInput;
+
+    @FindBy(xpath = "(//div[@role='tab'])[4]")
+    private WebElement note;
+
+    @FindBy(css = "iframe[class='tox-edit-area__iframe']")
+    private WebElement descriptionAndNoteIFrame;
 
     public WebElement getLoginUsername() {
         return loginUsername;
@@ -177,5 +186,41 @@ public class DialogContent extends MyMethods {
 
     public WebElement getPrioritySearchInput() {
         return prioritySearchInput;
+    }
+
+    public WebElement getEntranceExamsCreateNameInput() {
+        return entranceExamsCreateNameInput;
+    }
+
+    public WebElement getAcademicPeriodSelect() {
+        return academicPeriodSelect;
+    }
+
+    public WebElement getAcademicPeriodOption() {
+        return academicPeriodOption;
+    }
+
+    public WebElement getGradeLevelSelect() {
+        return gradeLevelSelect;
+    }
+
+    public WebElement getGradeLevelOption() {
+        return gradeLevelOption;
+    }
+
+    public WebElement getDescription() {
+        return description;
+    }
+
+    public WebElement getDescriptionAndNoteInput() {
+        return descriptionAndNoteInput;
+    }
+
+    public WebElement getNote() {
+        return note;
+    }
+
+    public WebElement getDescriptionAndNoteIFrame() {
+        return descriptionAndNoteIFrame;
     }
 }
