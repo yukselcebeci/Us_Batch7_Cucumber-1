@@ -7,6 +7,7 @@ Feature: Country Functionality
     Then User should login successfully
     And Navigate to Country page
 
+  @SmokeTest
   Scenario: Create Country
 #    Given Navigate to Campus
 #    When Enter username and password
@@ -18,6 +19,7 @@ Feature: Country Functionality
 
 #    Add edit country scenario
 
+  @Regression
   Scenario: Delete Country
 #      Given Navigate to Campus
 #      When Enter username and password
