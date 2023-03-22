@@ -21,19 +21,25 @@ public class Hooks {
     @After // This method runs after every scenario
     public void afterScenario(Scenario scenario) {
         System.out.println("Scenario has ended");
-        if (scenario.isFailed()){
-            TakesScreenshot takesScreenshot = (TakesScreenshot) BasicDriver.getDriver();
-            File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
-            LocalDateTime timeOfError = LocalDateTime.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMddyyyyHHmmss");
-            try {
-                FileUtils.copyFile(file,new File("src/test/java/ScreenShots/screenshot"
-                        +timeOfError.format(formatter)+".png"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        if (scenario.isFailed()) {
+
+            final byte[] byteImage = ((TakesScreenshot) BasicDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(byteImage, "image/png", scenario.getName());
+
+
+            // Save the screenshot on our computer
+//            TakesScreenshot takesScreenshot = (TakesScreenshot) BasicDriver.getDriver();
+//            File file = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//            LocalDateTime timeOfError = LocalDateTime.now();
+//            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMddyyyyHHmmss");
+//            try {
+//                FileUtils.copyFile(file,new File("src/test/java/ScreenShots/screenshot"
+//                        +timeOfError.format(formatter)+".png"));
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
         }
-            BasicDriver.quitDriver();
+        BasicDriver.quitDriver();
     }
 
 //    @BeforeStep
