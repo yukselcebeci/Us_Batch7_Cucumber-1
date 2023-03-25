@@ -10,7 +10,7 @@ public class _03_ApachePOIStart {
     public static void main(String[] args) throws IOException {
         String path = "src/test/java/ApachePOI/Resources/ApacheExcel2.xlsx"; // path of the file
 
-        FileInputStream fileInputStream = new FileInputStream(path); // connection to the file
+        FileInputStream fileInputStream = new FileInputStream(path); // connection to the file to read only
 
         Workbook workbook = WorkbookFactory.create(fileInputStream); // getting the workbook with the connection
 
