@@ -10,9 +10,11 @@ public class _07_WriteIntoAnExistingExcelFile {
 
     public static void main(String[] args) {
         String path = "src/test/java/ApachePOI/Resources/WriteIntoAnExcelFile.xlsx";
-        Sheet sheet;
-        Workbook workbook;
+
         FileInputStream inputStream;
+        Workbook workbook;
+        Sheet sheet;
+
         try {
             inputStream = new FileInputStream(path);
             workbook = WorkbookFactory.create(inputStream);
